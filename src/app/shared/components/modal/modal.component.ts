@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-
+import { ModalConfig } from "./interfaces/modal-config";
 @Component({
     selector: 'app-modal',
     templateUrl: './modal.component.html',
@@ -7,5 +7,5 @@ import { Component } from "@angular/core";
 })
 
 export class ModalComponent{
-
+    public modalConfig!: ModalConfig;
 }
