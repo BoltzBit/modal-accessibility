@@ -1,11 +1,17 @@
-import { Injectable } from "@angular/core";
+import { Injectable, ViewContainerRef } from "@angular/core";
 import { ModalConfig } from "../interfaces/modal-config";
+import { ModalComponent } from "../modal.component";
 
 @Injectable()
 
 export class ModalService{
+    
+    constructor(private viewContainerRef: ViewContainerRef){}
+
     public open(modalConfig: ModalConfig): ModalRef{
-        console.log('open called');
+        //componente pode ser fabricado diretamento pela viewContainerRef
+        const componentRef = this.viewContainerRef.createComponent(ModalComponent);
+
         return new ModalRef();
     }
 }
