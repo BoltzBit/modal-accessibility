@@ -6,10 +6,10 @@ import { ModalComponent } from "../modal.component";
 @Injectable()
 
 export class ModalService{
-    
+    public _viewContainerRef!: ViewContainerRef;
+
     constructor(
-        private _bodyInjectorService: BodyInjectorService,
-        private _viewContainerRef: ViewContainerRef){}
+        private _bodyInjectorService: BodyInjectorService){}
 
     public open(modalConfig: ModalConfig): ModalRef{
         //componente pode ser fabricado diretamento pela viewContainerRef
@@ -30,7 +30,7 @@ export class ModalService{
 export class ModalRef{
     constructor(private _componentRef: ComponentRef<ModalComponent>){}
     public close(): void{
-        console.log('close called');
+
         this._componentRef.destroy();
     }
 }
