@@ -1,5 +1,6 @@
 <div class="modal-overlay">
     <div class="modal-content"
+        app-focus-trap
         (click)="$event.stopPropagation()">
         <h1 class="modal-title">{{modalConfig.title}}</h1>
         <ng-container *ngTemplateOutlet="modalConfig.templateRef"></ng-container>
