@@ -9,8 +9,7 @@ import { ModalRef } from "../models/modal-ref";
 export class ModalService {
     public _viewContainerRef!: ViewContainerRef;
 
-    constructor(
-        private _bodyInjectorService: BodyInjectorService) { }
+    constructor() { }
 
     public open(modalConfig: ModalConfig): ModalRef {
         //componente pode ser fabricado diretamento pela viewContainerRef

@@ -2,6 +2,9 @@
     <div class="modal-content"
         app-focus-trap
         app-focus-back
+        role="dialog"
+        [attr.aria-label]="modalConfig.title"
+        aria-modal="true"
         (click)="$event.stopPropagation()"
         (keydown.esc)="modalRef.close()">
         <h1 class="modal-title">{{modalConfig.title}}</h1>
