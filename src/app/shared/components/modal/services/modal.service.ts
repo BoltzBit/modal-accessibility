@@ -17,8 +17,6 @@ export class ModalService {
 
         componentRef.instance.modalConfig = modalConfig;
 
-        debugger;
-
         const modalRef = new ModalRef(componentRef);
 
         componentRef.instance.modalRef = modalRef;
@@ -27,7 +25,6 @@ export class ModalService {
     }
 
     private createComponentRef(): ComponentRef<ModalComponent> {
-        debugger;
         return this._viewContainerRef.createComponent(ModalComponent);
     }
 }
